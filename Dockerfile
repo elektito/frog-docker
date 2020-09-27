@@ -60,3 +60,5 @@ RUN tar -xf frog-${FROG_VER}.tar.gz
 RUN cd frog-${FROG_VER} && ./configure && make -j $(nproc) && make install
 
 RUN ldconfig
+
+ENTRYPOINT ["frog"]
